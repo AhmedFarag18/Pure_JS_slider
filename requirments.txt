@@ -1,0 +1,33 @@
+I want to use ONLY Flexbox, CSS, and Jquery/JavaScript.
+I do NOT want to use any plug-ins-SLICK or SWIPPER.js
+
+I have 10 pictures with captions and a picture number.
+
+The HEIGHT of all the images are the same(the widths are not). Do not want to skew images.  Height should be 100%.
+img src="https://picsum.photos/300/400?random=1"
+img src="https://picsum.photos/600/400?random=2"
+
+The Thumbnails can be set as squares and those can be skewed(cover)
+flex-wrap: wrap; probably space between or center
+img src="https://picsum.photos/75/75?random=1" or you can use the above image and have the browser size it to 75x75(preferred)
+
+The full image will be something like img src="https://picsum.photos/600/1200?random=1"  This page (open new tab) can just scale the image(without skewing to 80vh or 80vw with a close button.
+
+The picture number can be found within the HTML code
+The caption can also be found within the HTML code
+The link to the full image can be found within the HTML code
+
+Thus each set will be a set of three images--Thumbnail, Image, and the full Image.
+
+What I want is when you click on one of the thumbnails, I want to have the placeholder animate and  show the Image new image.  When a user click on the link within the caption then the Full Image will be shown within a new tab with a close button.
+
+This should be done with CSS, Jquery/JavaScript!!!
+
+The only plug-in I want are:
+1) https://animate.style/   (animations) for use within animations
+2) font Awesome for use with icons
+3) jquery if that is what you use.
+
+See layout attached sliderFlex.jpg
+
+Bonus-Without using a Slider Plug-In if you can figure a way to use jquery or javascript to put next/previous button that would make me really happy.  But again, I do not want to use a plugin-ie slick, swiper.js, etc to do this.  You would need to build it into your js script file.
