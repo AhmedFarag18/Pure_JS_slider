@@ -11,7 +11,7 @@ $(document).ready(function() {
 // ============== show Thumbnails img ==========================
 function getThumbnails(){
     const navigationImg  = document.querySelector(".XYZ-navigation");
-    let slider =[...document.querySelectorAll('.XYZ-img-preview img')];
+    let slider =[...document.querySelectorAll('.XYZ-img-preview img[alt=img-preview]')];
     
     slider.forEach(el=>{
         navigationImg.innerHTML +=`<img class="XYZ-img-thumbnails" src="${el.attributes.src.value}" alt="" width="75" height="75">`;
@@ -105,10 +105,10 @@ function showAndHideFullImage(){
     previewBtn.forEach((ele) => {
         ele.addEventListener("click", (e) => {
             profileImg.classList.add("show");
-            let fullPath = ele.parentElement.parentElement.firstElementChild.src;
-            console.log(fullPath);
-            // console.log(imgPath);
-            image.setAttribute("src", fullPath);
+            let fullPath = ele.parentElement.parentElement.firstElementChild.nextElementSibling.src;
+            let pos = fullPath.indexOf('images') + 6;
+            let imgPath = fullPath.slice(pos);
+            image.setAttribute("src", `images${imgPath}`);
         })
     })
 // ============== close the popup full image =========================
@@ -118,18 +118,3 @@ function showAndHideFullImage(){
         })
     });
 }
-
-
-
-
-// var KeypressFunctions = [];
-// KeypressFunctions['T'.charCodeAt(0)] = showAndHideFullImage();
-// // KeypressFunctions['t'.charCodeAt(0)] = doThing
-
-// document.onkeydown = function(e){
-//     e = e || window.event;
-//     var key = e.which || e.keyCode;
-//     if(key===84){
-//         example();
-//     }
-// }
